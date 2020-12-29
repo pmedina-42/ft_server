@@ -1,13 +1,13 @@
-echo "Elige on u off para autoindex"
+echo "¿Quieres activar el autoindex? y / n"
 read autoindex
-if [ "$autoindex" == "on" ]; then
+if [ "$autoindex" == "y" ]; then
 sed -i 's/autoindex off;/autoindex on;/g' /etc/nginx/sites-available/localhost
-elif [ "$autoindex" == "off" ]; then
+elif [ "$autoindex" == "n" ]; then
 sed -i 's/autoindex on;/autoindex off;/g' /etc/nginx/sites-available/localhost
 else
-echo "No has metido valor válido" && exit
+echo "El valor introducido no es válido" && exit
 fi
-
+clear
 
 service nginx start
 service mysql start
