@@ -36,7 +36,6 @@ RUN wget https://files.phpmyadmin.net/phpMyAdmin/5.0.1/phpMyAdmin-5.0.1-english.
 COPY srcs/index.html .
 COPY srcs/style.css .
 COPY srcs/isaac.jpg .
-COPY srcs/marita.jpg .
 COPY srcs/config.inc.php phpmyadmin
 COPY srcs/wp-config.php .
 COPY srcs/wordpress.sql wordpress/
